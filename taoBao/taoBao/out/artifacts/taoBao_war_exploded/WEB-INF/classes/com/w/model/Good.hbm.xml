@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.w.model.Good" table="good">
+        <id name="id" column="id" type="int" >
+            <generator class="native"/>
+        </id>
+        <property name="name" column="name" type="string"/>
+        <property name="price" column="price" type="double"/>
+        <property name="type" column="type" type="string"/>
+        <property name="description" column="description" type="string"/>
+        <property name="factory" column="factory" type="string"/>
+        <property name="state" column="state" type="int"/>
+        <one-to-one name="stock" class="com.w.model.Stock" property-ref="good" cascade="save-update"/>
+        <one-to-one name="realStock" class="com.w.model.RealStock" property-ref="good" cascade="save-update"/>
+        <set name="buyCars" lazy="false" inverse="true" cascade="save-update">
+            <key column="gid"></key>
+            <one-to-many class="com.w.model.BuyCar"/>
+        </set>
+        <set name="orders" lazy="false" inverse="true" cascade="save-update">
+            <key column="gid"></key>
+            <one-to-many class="com.w.model.Orders"/>
+        </set>
+        <set name="comments" lazy="false" inverse="true" cascade="save-update">
+            <key column="gid"></key>
+            <one-to-many class="com.w.model.Comment"/>
+        </set>
+        <set name="stockRecords" lazy="false" inverse="true" cascade="save-update">
+            <key column="gid"></key>
+            <one-to-many class="com.w.model.StockRecord"/>
+        </set>
+    </class>
+</hibernate-mapping>

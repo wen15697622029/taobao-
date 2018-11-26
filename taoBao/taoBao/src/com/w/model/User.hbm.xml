@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.w.model.User" table="user">
+        <id name="id" column="id" type="int" >
+            <generator class="native"/>
+        </id>
+        <property name="name" column="name" type="string"/>
+        <property name="pass" column="pass" type="string"/>
+        <property name="sex" column="sex" type="string"/>
+        <property name="money" column="money" type="double"/>
+        <set name="userDetails" lazy="false" inverse="true">
+            <key column="uid"></key>
+            <one-to-many class="com.w.model.UserDetail"/>
+        </set>
+        <set name="buyCars" lazy="false" inverse="true" cascade="save-update">
+            <key column="uid"></key>
+            <one-to-many class="com.w.model.BuyCar"/>
+        </set>
+        <set name="orders" lazy="false" inverse="true" cascade="save-update">
+            <key column="uid"></key>
+            <one-to-many class="com.w.model.Orders"/>
+        </set>
+        <set name="comments" lazy="false" inverse="true" cascade="save-update">
+            <key column="uid"></key>
+            <one-to-many class="com.w.model.Comment"/>
+        </set>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,27 @@
+<!--<?xml version='1.0' encoding='utf-8'?>-->
+<!--<!DOCTYPE hibernate-configuration PUBLIC-->
+    <!--"-//Hibernate/Hibernate Configuration DTD//EN"-->
+    <!--"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">-->
+<!--<hibernate-configuration>-->
+  <!--&lt;!&ndash;<session-factory>&ndash;&gt;-->
+    <!--&lt;!&ndash;<property name="connection.url">jdbc:mysql://localhost:3306/mall</property>&ndash;&gt;-->
+    <!--&lt;!&ndash;<property name="connection.driver_class">com.mysql.jdbc.Driver</property>&ndash;&gt;-->
+    <!--&lt;!&ndash;<property name="connection.username">root</property>&ndash;&gt;-->
+    <!--&lt;!&ndash;<property name="connection.password">root</property>&ndash;&gt;-->
+    <!--&lt;!&ndash;<property name="hibernate.dialect">org.hibernate.dialect.MySQL5Dialect</property>&ndash;&gt;-->
+    <!--&lt;!&ndash;<property name="current_session_context_class">thread</property>&ndash;&gt;-->
+
+    <!--&lt;!&ndash;<property name="hibernate.show_sql">true</property>&ndash;&gt;-->
+    <!--&lt;!&ndash;<property name="format_sql">true</property>&ndash;&gt;-->
+    <!--&lt;!&ndash;<mapping resource="com/w/model/UserDetail.hbm.xml"/>&ndash;&gt;-->
+    <!--&lt;!&ndash;<mapping resource="com/w/model/User.hbm.xml"/>&ndash;&gt;-->
+    <!--&lt;!&ndash;<mapping resource="com/w/model/Good.hbm.xml"/>&ndash;&gt;-->
+    <!--&lt;!&ndash;<mapping resource="com/w/model/Stock.hbm.xml"/>&ndash;&gt;-->
+    <!--&lt;!&ndash;<mapping resource="com/w/model/BuyCar.hbm.xml"/>&ndash;&gt;-->
+    <!--&lt;!&ndash;<mapping resource="com/w/model/Orders.hbm.xml"/>&ndash;&gt;-->
+    <!--&lt;!&ndash;<mapping resource="com/w/model/RealStock.hbm.xml"/>&ndash;&gt;-->
+    <!--&lt;!&ndash;<mapping resource="com/w/model/Comment.hbm.xml"/>&ndash;&gt;-->
+    <!--&lt;!&ndash;<mapping resource="com/w/model/StockRecord.hbm.xml"/>&ndash;&gt;-->
+    <!--&lt;!&ndash;<mapping resource="com/w/model/Admin.hbm.xml"/>&ndash;&gt;-->
+  <!--&lt;!&ndash;</session-factory>&ndash;&gt;-->
+<!--</hibernate-configuration>-->
